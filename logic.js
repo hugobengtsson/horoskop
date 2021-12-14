@@ -2,14 +2,19 @@
 async function initSite(){
 
     eventListeners();
-
+    //setHoroscope();
 };
 
 
-async function loadHoroscope(){
+async function setHoroscope(month, date){
 
+    console.log(month + " " + date);
 
+    let url = "/api/addHoroscope.php?month=" + month + "&date=" + date;
 
+    let GET = await makeRequest(url, {method: "GET"});
+
+    console.log(GET);
 
 }
 
@@ -27,8 +32,6 @@ async function makeRequest(url, option){
 
 }
 
-
-
 function checkMonth(month){
 
     if (month === "Januari" || month === "Mars" || month === "Maj" || month === "Juli" || month === "Augusti" || month === "Oktober" || month === "December"){
@@ -36,10 +39,10 @@ function checkMonth(month){
     } else if (month === "Februari"){
         renderDays("29");
     } else if (month === ""){
-        
-        let select = document.querySelector("#select");
 
-        select.innerHTML = "";
+        let select = document.querySelector("#selectDays");
+
+        select.innerText = "";
 
         let optionText = document.createElement("option");
         optionText.innerText = "Månad måste väljas"
@@ -54,7 +57,7 @@ function checkMonth(month){
 
 function renderDays(days){
 
-    let select = document.querySelector("#select");
+    let select = document.querySelector("#selectDays");
 
     select.innerHTML = "";
 
@@ -75,16 +78,32 @@ function renderDays(days){
 
 }
 
+function selectedDate(event){
+
+    event.preventDefault();
+
+    let selectedMonth = document.querySelector("#selectMonth").value;
+    let selectedDays = document.querySelector("#selectDays").value;
+
+    setHoroscope(selectedMonth, selectedDays);
+
+}
+
 
 function eventListeners(){
 
-    let selectMonth = document.querySelector("#selectMonth");
-
-    selectMonth.addEventListener("change", function(){
+    document.querySelector("#selectMonth").addEventListener("change", function(){
 
         checkMonth(selectMonth.value);
 
     });
+
+    document.querySelector("#sumbitDate").addEventListener("submit", function(event){
+
+        selectedDate(event);
+
+    })
+
 
 };
 

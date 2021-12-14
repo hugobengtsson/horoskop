@@ -1,20 +1,20 @@
+<?php 
 
 $horoscope = [
-    "väduren" => "December handlar och att kanalisera energi och hitta fokus igen. Den här månaden 
-    har många saker som drar i dig och det kan göra det svårt att prioritera. Lång tid av 
-    försiktighet och att hålla avstånd gör att du kan liknas vid en kalv på grönbete. Du har svårt 
-    att säga nej till någonting oavsett om ekonomin eller tiden tillåter. Sammanfattningsvis blir 
-    december fantastisk men också väldigt intensiv.",
-    "oxen" => "December blir inledning på en nystart. Du kanske börjar plugga, för att vidareutbilda 
-    dig eller bara för nöjes skull. Det kan också handla om en förändrad i arbetssituation. Oavsett 
-    vad som sker i december är alla förändringar av positiv natur och du ska bara tillåta dig själv 
-    att ge dig hän. Det är också en period då familjen kommer att spela en stor roll. Du umgås mer 
-    med dina nära än tidigare.",
-    "tvillingarna" => "December blir något av ett uppvaknande. Du inser att du det senaste året 
-    gått omkring i en egen bubbla och nu när den släpper blir du förvirrad och har svårt att hitta 
-    din plats. Låt saker få landa, det måste få ta sin tid att komma tillbaka till en normal vardag 
-    igen. På sätt och vis har de senaste två åren varit så omdanande att inget kommer att bli riktigt 
-    som förr. Under julen och nyåret vilar du upp dig."
-    ]
+    "vaduren" => "December handlar och att kanalisera energi och hitta fokus igen. Den här månaden har många saker som drar i dig och det kan göra det svårt att prioritera. Lång tid av försiktighet och att hålla avstånd gör att du kan liknas vid en kalv på grönbete. Du har svårt att säga nej till någonting oavsett om ekonomin eller tiden tillåter. Sammanfattningsvis blir december fantastisk men också väldigt intensiv.",
+    "oxen" => "December blir inledning på en nystart. Du kanske börjar plugga, för att vidareutbilda dig eller bara för nöjes skull. Det kan också handla om en förändrad i arbetssituation. Oavsett vad som sker i december är alla förändringar av positiv natur och du ska bara tillåta dig själv att ge dig hän. Det är också en period då familjen kommer att spela en stor roll. Du umgås mer med dina nära än tidigare.",
+    "tvillingarna" => "December blir något av ett uppvaknande. Du inser att du det senaste året gått omkring i en egen bubbla och nu när den släpper blir du förvirrad och har svårt att hitta din plats. Låt saker få landa, det måste få ta sin tid att komma tillbaka till en normal vardag igen. På sätt och vis har de senaste två åren varit så omdanande att inget kommer att bli riktigt som förr. Under julen och nyåret vilar du upp dig.",
+    "kraftan" => "December blir en karusell av nöjen, arbete och alldeles för sena kvällar. Trots att du njuter av varje sekund känner du att du saknar något eller någon. Den sista pusselbiten fattas för att det här ska bli en riktig toppmånad. Under mitten av perioden tar du mod till dig och kontaktar en person som ständigt är i dina tankar. Oavsett om ni börjar umgås eller inte vill du försöka hitta tillbaka till hen.",
+    "lejonet" => "Under december försöker du få rätsida på din vardag igen. Du skapar rutiner för arbete och för fritid. Du vill visa världen att du är en seriös person som man kan lita på i alla lägen. En hemlig förälskelse på arbetet kan börja ta fart igen den här månaden. Du har helt enkelt inte kraften att stå emot dina känslor, de är för starka. Har du redan ett förhållande kan hela situationen bli väldigt jobbig.",
+    "jungfrun" => "Inledningen på december blir fartfylld medan avslutningen handlar om att hitta hem. Månaden innefattar både personlig utveckling och ett sökande efter meningen med tillvaron. Mycket av det som varit din vardag blir annorlunda och du tvingas söka nya vägar. Det här är både påfrestande och väldigt nyttigt för den förändringshatande Jungfrun. I slutet på perioden är familjen i fokus.",
+    "vagen" => "Under december försöker du att vara väldigt rationell, något som klingar illa med din spontana natur. Du försöker tvinga dig att tänka praktiskt och lita på logik snarare än magkänsla. Du går in i en energikrävande period och vill vara samlad, laddad och fokuserad. Slutet på perioden präglas av familjen. Det här är en bra tid att hitta mysiga rutiner och göra sådant du tycker om.",
+    "skorpionen" => "Om november handlade om privat utveckling och stimulans blir december tvärtom. Mycket står och stampar den här perioden. Du tycker inte att du kommer någonstans hur du än försöker vara både kreativ och nytänkande. Ditt problem kan vara att du vill för mycket och då låser det sig. Pröva med att sänka kraven på dig själv och lita mer på dina instinkter. Slutet av december kan bjuda på en oväntad vinterflirt.",
+    "skytten" => "December inleds och avslutas med lite drama men däremellan är det ganska lugnt. Har du möjlighet så reser du en del den här perioden. Nya miljöer stimulerar dig och väcker din nyfikenhet. Under december dagdrömmer du mycket och det gör att du kan upplevas som lite frånvarande och ofokuserad på arbetet. Dina kollegor kanske inte säger något rakt ut men du märker deras missnöje. Slutet av perioden blir festlig, glamorös och väldigt minnesvärd. Ett bra avslut på ett bra år. Under december bör du titta över dina finanser, du tenderar att göra av med ganska mycket pengar den här perioden.",
+    "stenbocken" => "December blir ovanligt social för den ibland lite enstöriga Stenbocken. Du får öva upp din förmåga att charma människor och vinna deras förtroende. Privat handlar december om ett mål du satte upp i början på året. Du kommer att prestera långt över dina egna förväntningar och det lägger en stabil grund för framtiden. Du umgås med nya, spännande och stimulerande människor.",
+    "vattumannen" => "December blir fartfylld, social och flyger iväg. Du vill hinna med många olika saker och har svårt att prioritera. Dela upp ditt liv i privat och jobb. Du måste se hur mycket tid du är villig att spendera på de här områdena och utgå från det när du börjar boka in aktiviteter. Slutet av december kan bjuda på en kortare resa och nya intryck.",
+    "fiskarna" => "Året avslutas med en ganska lugn månad där du har möjlighet att ta lite ledigt om du vill. De senaste årens påfrestningar har tagit ut sin rätt. Du behöver omge dig med familjen, vara mycket utomhus och att ta hand om dig själv. Både jobb och nöjen får komma i andra hand efter din hälsa och din familj. Slutet av december blir underbar."
+];
 
 // https://www.elle.se/horoskop/manadens-horoskop-december-2021/8021049
+
+?>
