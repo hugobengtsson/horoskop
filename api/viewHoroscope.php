@@ -8,23 +8,13 @@
 
                 session_start();
 
-                if($_SESSION["zodiacSign"]){
+                if(isset($_SESSION["zodiacSign"])){
                     echo json_encode($_SESSION["zodiacSign"]);
+                } else{
+                    echo "false";
                 }
             }
-
         }
-
-
-
-
-
-
-
-
-
-
-
 
     } catch(Exeption $err){
 

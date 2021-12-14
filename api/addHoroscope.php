@@ -8,13 +8,14 @@ try {
     if($_SERVER["REQUEST_METHOD"]){
         
         // IF request method is GET
-        if($_SERVER["REQUEST_METHOD"] == "GET"){
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             session_start();
 
-            $month = $_GET["month"];
-            $date = $_GET["date"];
+            $body = json_decode($_POST["body"], true);
 
+            $month = $body[month];
+            $date = $body[date];
             //echo json_encode($month . " " . $date);
 
             function saveHoroscope($zodiacSign, $description){
@@ -24,8 +25,9 @@ try {
                     $description
                 ];
 
-                if($_SESSION["zodiacSign"]){
+                if(isset($_SESSION["zodiacSign"])){
                     echo "false";
+
                 } else{
                     // Saves the list to SESSION
                     $_SESSION["zodiacSign"] = $toBeSaved;

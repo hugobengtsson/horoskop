@@ -3,18 +3,61 @@ async function initSite(){
 
     eventListeners();
     //setHoroscope();
+    getHoroscope();
 };
 
 
-async function setHoroscope(month, date){
+async function getHoroscope(){
 
-    console.log(month + " " + date);
-
-    let url = "/api/addHoroscope.php?month=" + month + "&date=" + date;
+    let url = "/api/viewHoroscope.php";
 
     let GET = await makeRequest(url, {method: "GET"});
 
-    console.log(GET);
+    console.log(GET)
+
+}
+
+async function setHoroscope(month, date){
+
+    let url = "/api/addHoroscope.php";
+
+    let dateObj = {month, date};
+
+    let body = new FormData();
+    body.set("body", JSON.stringify(dateObj));
+
+    let POST = await makeRequest(url, {method: "POST", body});
+
+    if(POST == true){
+        getHoroscope();
+    }
+
+}
+
+async function updateHoroscope(month, date){
+
+    let url = "/api/updateHoroscope.php";
+
+    let dateObj = {month, date};
+
+    let body = new FormData();
+    body.set("body", JSON.stringify(dateObj));
+
+    let POST = await makeRequest(url, {method: "POST", body});
+
+    if(POST == true){
+        getHoroscope();
+    }
+
+}
+
+async function deleteHoroscope(){
+
+    let url = "/api/deleteHoroscope.php";
+
+    let DELETE = await makeRequest(url, {method: "DELETE"});
+
+    console.log(DELETE)
 
 }
 
@@ -78,14 +121,21 @@ function renderDays(days){
 
 }
 
-function selectedDate(event){
+function selectedDate(event, action){
 
     event.preventDefault();
 
     let selectedMonth = document.querySelector("#selectMonth").value;
     let selectedDays = document.querySelector("#selectDays").value;
 
-    setHoroscope(selectedMonth, selectedDays);
+    if (selectedMonth == "" || selectedMonth == "Välj månad" || selectedDays == "" || selectedDays == "Välj datum"){
+        console.log("fel");
+    } else if (action == "update"){
+        updateHoroscope(selectedMonth, selectedDays);
+    }
+    else{
+        setHoroscope(selectedMonth, selectedDays);
+    }
 
 }
 
@@ -100,9 +150,23 @@ function eventListeners(){
 
     document.querySelector("#sumbitDate").addEventListener("submit", function(event){
 
-        selectedDate(event);
+        selectedDate(event, "save");
 
     })
+
+    document.querySelector("#updateHoroscope").addEventListener("click", function(event){
+
+        selectedDate(event, "update");
+
+    })
+
+    document.querySelector("#deleteHoroscope").addEventListener("click", function(){
+
+        deleteHoroscope();
+
+    })
+
+    
 
 
 };
