@@ -6,7 +6,7 @@ try {
     
     // If there exists a request method
     if($_SERVER["REQUEST_METHOD"]){
-        
+
         // IF request method is GET
         if($_SERVER["REQUEST_METHOD"] == "POST"){
 
