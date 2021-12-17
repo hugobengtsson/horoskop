@@ -73,7 +73,7 @@ async function setHoroscope(month, date){
     if(POST == true){
         getHoroscope();
     } else {
-        console.log("det finns redan sparat")
+
     }
 
 }
@@ -103,11 +103,10 @@ async function deleteHoroscope(){
 
     if(DELETE == true){
         getHoroscope();
-        console.log(DELETE)
+
     }
 
 }
-
 
 async function makeRequest(url, option){
 
@@ -118,7 +117,6 @@ async function makeRequest(url, option){
     } catch(err) {
         console.error(err);
     }
-
 
 }
 
@@ -179,7 +177,7 @@ function selectedDate(event, action){
     let selectedDays = document.querySelector("#selectDays").value;
 
     if (selectedMonth == "" || selectedMonth == "Välj månad" || selectedDays == "" || selectedDays == "Välj datum"){
-        console.log("fel");
+
     } else if (action == "update"){
         updateHoroscope(selectedMonth, selectedDays);
     }

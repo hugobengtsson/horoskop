@@ -3,10 +3,10 @@
 try {
 
     require_once("./horoscope.php");
-    
+
     // If there exists a request method
     if($_SERVER["REQUEST_METHOD"]){
-        
+
         // IF request method is GET
         if($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -33,9 +33,6 @@ try {
                     $_SESSION["zodiacSign"] = $toBeSaved;
                     echo "true";
                 }
-                
-                //echo json_encode($_SESSION["zodiacSign"]);
-
 
             }
 
