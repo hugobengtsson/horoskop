@@ -2,7 +2,6 @@
 async function initSite(){
 
     eventListeners();
-    //setHoroscope();
     getHoroscope();
 };
 
@@ -19,6 +18,18 @@ async function getHoroscope(){
         let horoscopeOutput = document.querySelector(".horoscopeOutput");
         horoscopeOutput.innerText = "";
 
+        let saveButton = document.querySelector("#submit");
+        saveButton.style.cursor = "pointer";
+        saveButton.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+
+        let updateButton = document.querySelector("#updateHoroscope");
+        updateButton.style.cursor = "default";
+        updateButton.style.backgroundColor = "rgba(128, 128, 128, 0.15)";
+
+        let deleteButton = document.querySelector("#deleteHoroscope");
+        deleteButton.style.cursor = "default";
+        deleteButton.style.backgroundColor = "rgba(128, 128, 128, 0.15)";
+
     } else {
 
         let horoscopeOutput = document.querySelector(".horoscopeOutput");
@@ -31,7 +42,18 @@ async function getHoroscope(){
         horoscopeText.innerText = GET[1];
     
         horoscopeOutput.append(horoscopeHeader, horoscopeText);
-        console.log(GET)
+
+        let saveButton = document.querySelector("#submit");
+        saveButton.style.cursor = "default";
+        saveButton.style.backgroundColor = "rgba(128, 128, 128, 0.15)";
+
+        let updateButton = document.querySelector("#updateHoroscope");
+        updateButton.style.cursor = "pointer";
+        updateButton.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+
+        let deleteButton = document.querySelector("#deleteHoroscope");
+        deleteButton.style.cursor = "pointer";
+        deleteButton.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
 
     }
 
@@ -113,7 +135,7 @@ function checkMonth(month){
         let select = document.querySelector("#selectDays");
 
         select.innerText = "";
-
+        select.style.backgroundColor = "rgba(255, 255, 255, 0.15)";
         let optionText = document.createElement("option");
         optionText.innerText = "Månad måste väljas"
 
@@ -130,6 +152,7 @@ function renderDays(days){
     let select = document.querySelector("#selectDays");
 
     select.innerHTML = "";
+    select.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
 
     let optionText = document.createElement("option");
     optionText.innerText = "Välj datum"
