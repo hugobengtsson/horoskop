@@ -6,6 +6,7 @@ async function initSite(){
     getHoroscope();
 };
 
+// API Logic:
 
 async function getHoroscope(){
 
@@ -13,7 +14,26 @@ async function getHoroscope(){
 
     let GET = await makeRequest(url, {method: "GET"});
 
-    console.log(GET)
+    if (GET === false){
+
+        let horoscopeOutput = document.querySelector(".horoscopeOutput");
+        horoscopeOutput.innerText = "";
+
+    } else {
+
+        let horoscopeOutput = document.querySelector(".horoscopeOutput");
+        horoscopeOutput.innerText = "";
+
+        let horoscopeHeader = document.createElement("h2");
+        horoscopeHeader.innerText = GET[0];
+
+        let horoscopeText = document.createElement("p");
+        horoscopeText.innerText = GET[1];
+    
+        horoscopeOutput.append(horoscopeHeader, horoscopeText);
+        console.log(GET)
+
+    }
 
 }
 
@@ -30,6 +50,8 @@ async function setHoroscope(month, date){
 
     if(POST == true){
         getHoroscope();
+    } else {
+        console.log("det finns redan sparat")
     }
 
 }
@@ -57,7 +79,10 @@ async function deleteHoroscope(){
 
     let DELETE = await makeRequest(url, {method: "DELETE"});
 
-    console.log(DELETE)
+    if(DELETE == true){
+        getHoroscope();
+        console.log(DELETE)
+    }
 
 }
 
@@ -74,6 +99,8 @@ async function makeRequest(url, option){
 
 
 }
+
+// Form logic:
 
 function checkMonth(month){
 
@@ -139,6 +166,7 @@ function selectedDate(event, action){
 
 }
 
+// Eventlisteners:
 
 function eventListeners(){
 
@@ -165,9 +193,6 @@ function eventListeners(){
         deleteHoroscope();
 
     })
-
-    
-
 
 };
 

@@ -14,8 +14,8 @@ try {
 
             $body = json_decode($_POST["body"], true);
 
-            $month = $body[month];
-            $date = $body[date];
+            $month = $body["month"];
+            $date = $body["date"];
             //echo json_encode($month . " " . $date);
 
             function saveHoroscope($zodiacSign, $description){
