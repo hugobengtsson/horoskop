@@ -24,11 +24,11 @@ async function getHoroscope(){
 
         let updateButton = document.querySelector("#updateHoroscope");
         updateButton.style.cursor = "default";
-        updateButton.style.backgroundColor = "rgba(128, 128, 128, 0.15)";
+        updateButton.style.backgroundColor = "rgba(255, 255, 255, 0.15)";
 
         let deleteButton = document.querySelector("#deleteHoroscope");
         deleteButton.style.cursor = "default";
-        deleteButton.style.backgroundColor = "rgba(128, 128, 128, 0.15)";
+        deleteButton.style.backgroundColor = "rgba(255, 255, 255, 0.15)";
 
     } else {
 
@@ -45,7 +45,7 @@ async function getHoroscope(){
 
         let saveButton = document.querySelector("#submit");
         saveButton.style.cursor = "default";
-        saveButton.style.backgroundColor = "rgba(128, 128, 128, 0.15)";
+        saveButton.style.backgroundColor = "rgba(255, 255, 255, 0.15)";
 
         let updateButton = document.querySelector("#updateHoroscope");
         updateButton.style.cursor = "pointer";
